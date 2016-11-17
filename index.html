@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zone Pub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" >
+  </head>
+  <body>
+  <div class="box">
+
+    <div class="zoneSele">
+      <h5 class="info">Selected Zone</h5>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right">( <span class="cols">0</span>px X <span class="rows">0</span>px  ) </span>
+          Width & Height
+        </li>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"><span class="totlaPixels">0</span> px </span>
+          totl Pixels
+        </li>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"><span class="numberCols">0</span></span>
+          Cols
+        </li>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"><span class="numberRows">0</span></span>
+          Rows
+        </li>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"> [ Xmin <span class="Xmin">0</span> , Xmax <span class="Xmax">0</span> ] </span>
+          Xmin - Xmax
+        </li>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"> [ Ymin <span class="Ymin">0</span> , Ymax <span class="Ymax">0</span> ]</span>
+          Ymin - Ymax
+        </li>
+      </ul>
+      </div>
+    <div class="operations">
+      <span> Show / Hide (Images)</span>
+      <select id="selectImageVisible">
+        <option value="0">Hidden</option>
+        <option value="1" selected="true">Show</option>
+      </select>
+    </div>
+    <div class="box__container js-container">
+      <div class="overlay"></div>
+      <div class="innerContainer"><img src="img/loading.gif" class="loading"/></div>
+
+
+    </div>
+  </div>
+<script src="js/PixelSelectable.js"></script>
+<script src="js/modelSelectable.js"></script>
+<script src="js/app.js"></script>
+<script>
+$( "#riverroad" ).tooltip({ content: '<span class="borderTool">Resturant name</span>' });
+</script>
+</body>
+</html>

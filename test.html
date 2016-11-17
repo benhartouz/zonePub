@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://www.mexicoporunmillon.com/style.css" />
+  <script type="text/javascript" src="http://www.mexicoporunmillon.com/gr.js"></script>
+  <script type="text/javascript" src="http://www.mexicoporunmillon.com/rubberband.js"></script>
+  <script type="text/javascript" src="js/Dom.js"></script>
+  <title>Pixel Selectable</title>
+</head>
+<body onLoad="moveCanvas('grid')" bgcolor="#006600" background="img/bg.gif" text="#000000" link="#000000" vlink="#000000" leftmargin="0" topmargin="0">
+<table width="1000" border="0" align="center" cellpadding="7" cellspacing="0" bgcolor="#666666">
+  <tr>
+    <td colspan="15">&nbsp;&nbsp;&nbsp;&nbsp;<b><font color='#00CC00' size=+2 face="Trebuchet MS">Mexico</font><font color='#ffffff' size=+2  face="Trebuchet MS">PorUn</font><font color='#FF3333' size=+2  face="Trebuchet MS">Millon.com</font></h2>
+    </td>
+    <td colspan="15" valign="top"><b><font color='#ffffff' size=3 face="Arial,Verdana">1,000,000 de pixeles publicitarios - 25 centavos cada uno</font>
+    </td>
+    <td colspan="15">
+      <table style="border: 2px solid #c69b1d" cellpadding="1">
+        <tr>
+          <td>
+	    <b><font color='#ff4444' size=2 face="Arial,Verdana">Vendidos: <font color='#ffffff' size=2 face="Arial,Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11,200</font><br>
+	    <b><font color='#00CC00' size=2 face="Arial,Verdana">Disponibles: <font color='#ffffff' size=2 face="Arial,Verdana">&nbsp;&nbsp;988,800</font>
+	  </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FFFFFF"><div class="content">
+<div class="process-content">
+<h1>Selecciona tus pixeles en el mapa con el raton</h1>
+<div class="indent">
+<table>
+    <tr>
+    <td class="label">Vas a comprar :</td>
+    <td> x  pixeles en Mapa principal</td>
+    </tr>
+</table>
+</div>
+<form method="post" action="/get_pixels.php">
+<p>Seleccione la regi&oacute;n de pixeles en el mapa arrastrando el rat&oacute;n.&nbsp;&nbsp;<input type="submit" value="Continuar &gt;&gt;" class="submit"/>
+</p>
+<p>Seleccionados: <strong><span id="selection">(ninguno)</span></strong></p>
+</div>
+<input type="hidden" name="step" value="2" />
+<input type="hidden" name="grid_id" value="1" />
+<input type="hidden" name="x" value="0" />
+<input type="hidden" name="y" value="0" />
+<input type="hidden" name="w" value="0" />
+<input type="hidden" name="h" value="0" />
+<input type="hidden" name="free_square" value="10000" />
+<input type="hidden" name="free_paid" value="" />
+<input type="hidden" name="selectable_square_size" value="10" />
+<input type="hidden" name="max_w" value="0" />
+<input type="hidden" name="max_h" value="0" />
+<input type="hidden" name="pixel_price" value="0.25" />
+<input type="hidden" name="decimal_point" value="." />
+<input type="hidden" name="thousands_separator" value="," />
+<input type="hidden" name="currency_symbol" value="$" />
+<input type="hidden" name="pixels_text" value="pixeles" />
+</form>
+
+<div id="grid" style="width: 1000px; height: 1000px;">
+<div id="canvas" style="background-image: url('http://www.mexicoporunmillon.com/grids/grid_1_gray.png?x=1479315688'); position: absolute; left: 0; top: 0; width: 1000px; height: 1000px; overflow: hidden; visibility: hidden;" onMouseDown="startLine();" onMouseUp="stopLine();"></div>
+</div>
+
+      </td>
+      </tr>
+      <tr>
+      <td>
+      <table width="1000" height="39" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+      <td width="1000" height="39" align="center" bgcolor="#666666">
+      <p><font color="#DDDDDD" size="1" face="Verdana, Arial, Helvetica, sans-serif">M&eacute;xicoPorUnMill&oacute;n.com &copy; 2007. Todos los derechos reservados. <br>Las im&aacute;genes o logotipos puede tener derechos reservados de sus respectivos due&ntilde;os. No somos responsables por el contenido de sitios externos.</font></p>
+      <p><font color="#DDDDDD" size="1" face="Verdana, Arial, Helvetica, sans-serif">Ultima actualizaci&oacute;n: 26 de Noviembre 2007</font></p>
+      </td>
+            </tr>
+          </table>
+          <!-- Start of StatCounter Code -->
+          <script type="text/javascript">
+          var sc_project=3066720;
+          var sc_invisible=0;
+          var sc_partition=33;
+          var sc_security="68ab5528";
+          </script>
+          <script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c34.statcounter.com/3066720/0/e4bda283/0/" alt="simple hit counter" /></a></div></noscript>
+          <!-- End of StatCounter Code -->
+        </td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
