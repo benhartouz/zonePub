@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Zone Pub</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
@@ -45,13 +47,25 @@
         </li>
       </ul>
       </div>
+
+      <div id="dialog" title="Basic dialog" class="hidden">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+      </div>
+
+
     <div class="operations">
+      <input type="hidden" name="xminValue" id="xminValue" />
+      <input type="hidden" name="xmaxValue" id="xmaxValue" />
+      <input type="hidden" name="yminValue" id="yminValue" />
+      <input type="hidden" name="ymaxValue" id="ymaxValue" />
+
+
       <span> Show / Hide (Images)</span>
       <select id="selectImageVisible">
         <option value="0">Hidden</option>
         <option value="1" selected="true">Show</option>
       </select>
-      <a href="">buy pixel</a>
+      <a href="" class="bypixel">buy pixel</a>
     </div>
     <div class="box__container js-container">
       <div class="overlay"></div>

@@ -4,6 +4,7 @@ var Grid = new function(){
     this.init = function(){
           Grid.initSelectable();
           Grid.initEvents();
+          Grid.sentRequset();
     };
     // suggesed another zone
     this.suggOtherZone = function(){
@@ -78,11 +79,22 @@ var Grid = new function(){
                   childIndex.push($childs.eq(0).index())
               }
         });
+
+        /*
+        <input type="hidden" name="xminValue" id="xminValue" />
+        <input type="hidden" name="xmaxValue" id="xmaxValue" />
+        <input type="hidden" name="yminValue" id="yminValue" />
+        <input type="hidden" name="ymaxValue" id="ymaxValue" />
+        */
         $(".Ymin").html(parentIndex[0]+1);
         $(".Ymax").html(parentIndex[parentIndex.length-1]+1);
-
         $(".Xmin").html(childIndex[0]+1);
         $(".Xmax").html(childIndex[childIndex.length-1]+1);
+        /*****/
+        $("#yminValue").val(parentIndex[0]+1);
+        $("#ymaxValue").val(parentIndex[parentIndex.length-1]+1);
+        $("#xminValue").val(childIndex[0]+1);
+        $("#xmaxValue").val(childIndex[childIndex.length-1]+1);
 
         // html +=  ($parent.index() + 1) + ' , ' +  ($lastParent.index() + 1) + ' ### ';
         // html +=  ($childs.eq(0).index() + 1) + ' , ' + ($lastChilds.eq( $childs.length - 1 ).index() + 1);
@@ -151,6 +163,35 @@ var Grid = new function(){
           }
       });
     });
+    };
+
+    this.sentRequset = function(){
+        $(".bypixel").on("click" , function(e){
+          e.preventDefault();
+          var xminVal , xmaxVal , yminVal , ymaxVal ;
+
+          yminVal = $("#yminValue").val();
+          ymaxVal = $("#ymaxValue").val();
+          xminVal = $("#xminValue").val();
+          xmaxVal =$("#xmaxValue").val();
+              e.preventDefault();
+              $.ajax({
+                   url : "/buyPixel" ,
+                   cashe : false ,
+                   datatype : "json" ,
+                   type : "POST" ,
+                   data : {
+                      ymin : yminVal,
+                      ymax : ymaxVal,
+                      xmin : xminVal,
+                      xmax : xmaxVal
+                   }
+              }).done(function(result){
+                $("#dialog p").html("Status :" + result.status + " ");
+                 $( "#dialog" ).dialog();
+                  console.log(result);
+              })
+        });
     };
 
 

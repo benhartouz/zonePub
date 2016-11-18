@@ -6,7 +6,7 @@ var PixelSelectable = new function(){
        // Generate Grid"
        this.generateGrid = function(){
          $.ajax({
-            url: "https://demo8747629.mockable.io/pixel",
+            url: "/listItems",
             cache: false
           })
           .done(function( results ) {

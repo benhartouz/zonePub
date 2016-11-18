@@ -82,12 +82,15 @@
 }
 .box__item_selected{
   background-color: #000;
+
 }
 
 .box-helper {
   border: 2px solid #46c8ae;
 }
-.ui-selecting { background: #FECA40; }
+.ui-selecting {
+  background: #FECA40 !important;
+  z-index: 50 !important;  }
 .results {
   border: 2px solid black;
   position: absolute;

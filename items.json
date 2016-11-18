@@ -1,0 +1,32 @@
+{
+ "item" :[
+        {
+         "url" : "http://www.bellevue-boppard.de/media/9a192ecb-277b-4be5-a77b-4e1dbb66295f/restaurant-le-chopin-tisch.jpg?w=400&h=400&action=crop",
+         "Xmin" : 0 ,
+         "Xmax" : 19 ,
+         "Ymin" : 2 ,
+         "Ymax" : 21
+        },{
+        "url" : "http://xxlclass.com/wp-content/uploads/2016/08/zastava-1.jpg",
+        "Xmin" : 15 ,
+         "Xmax" : 19 ,
+         "Ymin" : 25 ,
+         "Ymax" : 49
+        },{
+        "url" : "http://www.agriusrestaurant.com/wp-content/uploads/2016/04/agrius-restaurant-732-yates-Victoria-sm.jpg",
+        "Xmin" : 22 ,
+         "Xmax" : 46 ,
+         "Ymin" : 15 ,
+         "Ymax" : 39
+        },{
+        "url" : "http://www.davidcantwellphotography.com/images/HotelsS/Hotel-Seaview-RestaurantS.jpg",
+        "Xmin" : 31 ,
+         "Xmax" : 37 ,
+         "Ymin" : 4 ,
+         "Ymax" : 9
+        }
+
+
+  ]
+
+}
